@@ -25,8 +25,17 @@ server.use(express.static(__dirname + '/public'))
 
 server.get('/', (req, res) => {
   const viewData = {
+    title: 'Gallery',
     art,
   }
 
+  // for (let artWork of art) {
+  //   console.log(artWork)
+  // }
+  // const singleData = {
+  //   artwork,
+  // }
+
   res.render('home', viewData)
+  // res.render('artwork-summary', singleData)
 })
