@@ -39,12 +39,5 @@ server.get('/artworks/:id', (req, res) => {
   console.log(urlID)
   console.log(artID)
 
-  const viewData = {
-    title: 'Artworks',
-    art,
-    artID,
-    comments,
-  }
-
-  res.render('artworks', viewData)
+  res.render('artworks', artID)
 })
