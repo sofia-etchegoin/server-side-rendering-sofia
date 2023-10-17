@@ -41,3 +41,5 @@ server.get('/artworks/:id', (req, res) => {
 
   res.render('artworks', artID)
 })
+
+
