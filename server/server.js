@@ -43,6 +43,7 @@ server.get('/artworks/:id', (req, res) => {
     title: 'Artworks',
     art,
     artID,
+    comments,
   }
 
   res.render('artworks', viewData)
