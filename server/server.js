@@ -29,13 +29,21 @@ server.get('/', (req, res) => {
     art,
   }
 
-  // for (let artWork of art) {
-  //   console.log(artWork)
-  // }
-  // const singleData = {
-  //   artwork,
-  // }
-
   res.render('home', viewData)
   // res.render('artwork-summary', singleData)
+})
+
+server.get('/artworks/:id', (req, res) => {
+  const urlID = req.params.id
+  const artID = art.find((element) => element.id == urlID)
+  console.log(urlID)
+  console.log(artID)
+
+  const viewData = {
+    title: 'Artworks',
+    art,
+    artID,
+  }
+
+  res.render('artworks', viewData)
 })

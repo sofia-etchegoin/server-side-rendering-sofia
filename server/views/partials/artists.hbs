@@ -1,9 +1,10 @@
-
+{{#each art}}
       <div class="container">
+        <h2 class="container-head">{{title}}</h2>
             <img src="{{artwork}}" alt="Bird Image" class="img">
         <div class="inner">
           <p>{{artist.name}}</p>
           <p>{{license.name}}</p>
           </div>
       </div>
-   
+   {{/each}}
